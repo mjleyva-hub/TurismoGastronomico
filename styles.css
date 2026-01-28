@@ -1,0 +1,333 @@
+/* ============================================================
+   ESTILOS GENERALES - AZUL MARINO ELEGANTE Y NEGRO
+   ============================================================ */
+
+/* ============================================================
+   VARIABLES DE COLOR Y FORMATO USADAS EN TODO EL SITIO
+   ============================================================ */
+:root {
+  --bg: #000;
+  --navy: #0a0f3c;
+  --accent: #006699;
+  --text: #f5f5f5;
+  --muted: #aaa;
+  --card: #111;
+  --radius: 12px;
+}
+
+/* ============================================================
+   RESETEO GENERAL
+   ============================================================ */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+
+body {
+  font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
+  color: var(--text);
+  background: linear-gradient(135deg, var(--navy) 60%, #000 100%);
+  line-height: 1.6;
+}
+
+/* ============================================================
+   CABECERA Y MENÚ
+   ============================================================ */
+.site-header {
+  background: linear-gradient(90deg, #000, var(--navy));
+  border-bottom: 2px solid var(--accent);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
+  font-size: 1.5rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.main-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
+}
+
+.main-nav a:hover { color: var(--accent); }
+
+/* ============================================================
+   HERO PRINCIPAL
+   ============================================================ */
+.hero {
+  height: 85vh;
+  background: 
+    linear-gradient(120deg, rgba(10,15,60,0.85), rgba(0,0,0,0.9)),
+    url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=60")
+    center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title {
+  font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
+  font-size: 3rem;
+  color: var(--accent);
+  letter-spacing: 2px;
+}
+
+/* ============================================================
+   SECCIONES GENERALES
+   ============================================================ */
+.section { padding: 4rem 1rem; text-align: center; }
+.container { max-width: 1100px; margin: auto; }
+
+h2 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
+  font-weight: bold;
+}
+
+.lead {
+  color: var(--muted);
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.alt-bg { background: #0b0f2a; }
+
+/* ============================================================
+   TARJETAS DE CONTENIDO
+   ============================================================ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
+  color: var(--accent);
+  margin: 1rem 0 .5rem;
+}
+
+.card p {
+  color: var(--muted);
+  padding: 0 1rem 1rem;
+}
+
+/* ============================================================
+   FORMULARIO Y MAPA
+   ============================================================ */
+.map-and-form {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 1rem;
+  align-items: start;
+}
+
+#map {
+  width: 100%;
+  height: 300px;
+  border-radius: var(--radius);
+  border: 0;
+}
+
+.location-form {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: var(--radius);
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: .6rem;
+  color: var(--text);
+  font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
+}
+
+input {
+  width: 100%;
+  padding: .5rem;
+  border-radius: 8px;
+  border: 1px solid #222;
+  background: #111;
+  color: var(--text);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--accent);
+  color: #000;
+  padding: .6rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
+}
+.btn:hover { background: #0099cc; }
+
+/* ============================================================
+   TARJETA DE CONTACTO
+   ============================================================ */
+.contact-card {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  max-width: 400px;
+  margin: auto;
+  text-align: left;
+}
+
+.contact-card p {
+  margin-bottom: .5rem;
+  color: var(--text);
+  font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+  background: #000;
+  color: var(--muted);
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 2px solid var(--accent);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
+}
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* ============================================================
+   LOGOS EN TÍTULOS (INICIO Y UBICACIÓN)
+   ============================================================ */
+.titulo-inicio,
+.titulo-ubicacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.logo-titulo {
+  position: absolute;
+  right: 20px;
+  width: 80px;
+  height: auto;
+}
+
+/* ============================================================
+   ENLACES EXTRA DEBAJO DEL MAPA
+   ============================================================ */
+.opciones-extra {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 30px;
+}
+
+.opciones-extra .footer-link {
+  background: var(--accent);
+  color: #000;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
+  transition: background 0.3s;
+}
+
+.opciones-extra .footer-link:hover {
+  background: #0099cc;
+  text-decoration: underline;
+}
+
+/* ============================================================
+   DISEÑO RESPONSIVO
+   ============================================================ */
+@media(max-width:900px){
+  .main-nav { display: none; }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: 0;
+    color: var(--accent);
+    font-size: 1.5rem;
+  }
+
+  .main-nav.open {
+    display: block;
+    background: #0b0f2a;
+    position: absolute;
+    right: 1rem;
+    top: 70px;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  .map-and-form {
+    grid-template-columns: 1fr;
+  }
+
+  .logo-titulo {
+    width: 60px;
+    right: 10px;
+  }
+
+  .opciones-extra {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

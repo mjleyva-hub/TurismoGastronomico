@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TURISMO GASTRONÓMICO</title>
+
+  <!-- FUENTE -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+  <!-- LEAFLET -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <!-- ESTILOS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- ==================== CABECERA ==================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">🍽️ LA RUTA DEL SABOR COMIENZA AQUÍ</a>
+
+      <button id="btn-menu" class="menu-toggle" aria-expanded="false" aria-controls="main-nav">☰</button>
+
+      <nav id="main-nav" class="main-nav">
+        <ul>
+          <li><a href="#inicio">INICIO</a></li>
+          <li><a href="#destinos">DESTINOS</a></li>
+          <li><a href="#gastronomia">GASTRONOMÍA</a></li>
+          <li><a href="#ubicacion">UBICACIÓN</a></li>
+          <li><a href="#contacto">CRÉDITOS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero">
+    <h1 class="hero-title">StreetFood Experience MX</h1>
+  </section>
+
+  <!-- ==================== INICIO ==================== -->
+  <section id="inicio" class="section">
+    <div class="container">
+      <div class="titulo-inicio">
+        <h2>INICIO</h2>
+        <img src="STRET FOOD LOGO.png" alt="Logo Street Food" class="logo-titulo">
+      </div>
+
+      <p class="lead">
+        BIENVENIDO AL SITIO DE STREET FOOD EXPERIENCE MX. ES UNA EMPRESA DIGITAL QUE PROMUEVE EL TURISMO GASTRONÓMICO, URBANO 
+        CONECTANDO AL TURISTA CON EXPERIENCIAS DE COMIDA CALLEJERA Y ESPACIOS CULINARIOS LOCALES A TRAVÉS DE PLATAFORMAS 
+        DIGITALES INTERACTIVAS.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== DESTINOS ==================== -->
+  <section id="destinos" class="section alt-bg">
+    <div class="container">
+      <h2>DESTINOS</h2>
+      <p class="lead">ALGUNOS DE LOS DESTINOS GASTRONÓMICOS MÁS DESTACADOS DEL MUNDO.</p>
+
+      <div class="grid">
+        <article class="card">
+          <img src="PRIMERFOOD.jpeg" alt="Oaxaca">
+          <h3>MÉXICO CITY - CULINARY BACKSTREETS - FOOD</h3>
+          <p>UNA JOYA GASTRONÓMICA LLENA DE SABORES, TRADICIÓN Y CULTURA.</p>
+        </article>
+
+        <article class="card">
+          <img src="SEGUNDO FOOD.jpeg" alt="Toscana">
+          <h3>FOOD TOUR MÉXICO UNDERGROUND</h3>
+          <p>UN LUGAR LLENO DE SABOR Y CULTURA.</p>
+        </article>
+
+        <article class="card">
+          <img src="TERCERFOOD.jpeg" alt="Lima Perú">
+          <h3>STREET FOOD GOURMET</h3>
+          <p>LA CAPITAL DE LOS SABORES LATINOS.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== GASTRONOMÍA ==================== -->
+  <section id="gastronomia" class="section">
+    <div class="container">
+      <h2>GASTRONOMÍA</h2>
+      <p class="lead">PLATOS EMBLEMÁTICOS Y EXPERIENCIAS CULINARIAS QUE NO PUEDES PERDERTE.</p>
+
+      <div class="grid">
+        <article class="card">
+          <img src="PASTA.webp" alt="Pasta Italiana">
+          <h3>PASTA ITALIANA</h3>
+          <p>UNA EXPERIENCIA CASERA Y TRADICIONAL QUE CONQUISTA A TODOS.</p>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=60" alt="Ceviche">
+          <h3>CEVICHE PERUANO</h3>
+          <p>REFRESCANTE, COLORIDO Y LLENO DE SABOR MARINO.</p>
+        </article>
+
+        <article class="card">
+          <img src="TACOS.jpeg" alt="Tacos">
+          <h3>TACOS MEXICANOS</h3>
+          <p>UNA DELICIA QUE REPRESENTA LA ALEGRÍA Y DIVERSIDAD DEL SABOR LOCAL.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== UBICACIÓN ==================== -->
+  <section id="ubicacion" class="section alt-bg">
+    <div class="container">
+      <div class="titulo-ubicacion">
+        <h2>UBICACIÓN</h2>
+        <img src="STRET FOOD LOGO.png" alt="Logo Street Food" class="logo-titulo">
+      </div>
+
+      <p class="lead">HAZ CLIC EN EL MAPA PARA AGREGAR COORDENADAS Y COMPARTE TU LUGAR FAVORITO.</p>
+      <p class="lead">HAZ CLICK EN "STREET" PARA COMENZAR LA AVENTURA.</p>
+
+
+      <div class="map-and-form">
+        <div id="map"></div>
+
+        <form id="location-form" class="location-form">
+          <label>NOMBRE DEL LUGAR
+            <input type="text" id="loc-name" required>
+          </label>
+
+          <label>DIRECCIÓN / CIUDAD
+            <input type="text" id="loc-address" required>
+          </label>
+
+          <label>COORDENADAS (LAT,LON)
+            <input type="text" id="loc-coords" placeholder="Haz clic en el mapa">
+          </label>
+
+          <button type="submit" class="btn">AGREGAR</button>
+          <p id="loc-message" class="muted"></p>
+        </form>
+      </div>
+
+      <!-- NUEVAS OPCIONES DE ENLACE DEBAJO DEL MAPA -->
+      <div class="opciones-extra">
+        <a href="https://share.google/Imf9k86K2mnb9XbLK" target="_blank" class="footer-link">STREET 1</a>
+        <a href="https://share.google/fxNh1Qx1A24dHKMj6" target="_blank" class="footer-link">STREET 2</a>
+        <a href="https://share.google/WvF3ZihJxa1zBTZZc" target="_blank" class="footer-link">STREET 3</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACTO ==================== -->
+  <section id="contacto" class="section">
+    <div class="container">
+      <h2>CRÉDITOS</h2>
+      <p class="lead">DATOS DE CONTACTO DEL EQUIPO DE TURISMO GASTRONÓMICO</p>
+
+      <div class="contact-card">
+        <p><strong>- NOMBRES -</p>
+        <p><strong>SALIVAR PEDROZA DANA FERNANDA</p>
+        <p><strong>CASTRO RODRÍGUEZ ANNA BELÉN</p>
+        <p><strong>MASAS CANALES AIZZHA ITZEL</p>
+        <p><strong>GONZALES HERNÁNDEZ SOFIA</p>
+
+      </div>
+    </div>
+  </section>
+
+ <!-- TARJETA RB -->
+      <div class="contact-card">
+        <p><strong>- RB -</strong></p>
+        <p>
+          <a href="https://www.google.com/gasearch?q=street%20food%20ciudad%20de%20m%C3%A9xico&source=sh/x/gs/m2/5" 
+             target="_blank" 
+             style="color: var(--accent); text-decoration: none; word-break: break-all;">
+            https://www.google.com/gasearch?q=street%20food%20ciudad%20de%20m%C3%A9xico&source=sh/x/gs/m2/5
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+</div>
+
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> TURISMO GASTRONÓMICO</p>
+      <a href= "https://youtu.be/r7KqGUMtA6M?si=lBTT3RRwJ9rppL8A" target="_blank" class="footer-link">Conoce más...</a>
+    </div>
+  </footer>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
